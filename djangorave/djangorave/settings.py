@@ -123,6 +123,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-RAVE_PUBLIC_KEY = 'FLWPUBK_TEST-fff07b07a48e7ddbebb1ec034211b33d-X'
-RAVE_SECRET_KEY = 'FLWSECK_TEST-09891ac8c459eafdb10e3afccc0df58d-X'
+RAVE_PUBLIC_KEY = 'YOUR PUBLIC KEY HERE'
+RAVE_SECRET_KEY = 'YOUR SECRET KEY HERE'
 WILDLIFE_LOGO = 'https://res.cloudinary.com/fullstackmafia/image/upload/v1574344653/green-forest-trees.jpg.860x0_q70_crop-scale_n8k6hs.jpg'
