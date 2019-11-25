@@ -1,0 +1,31 @@
+h3 {
+    padding: 10px 15px 10px 15px;
+    background-color: coral;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.checkout-form {
+    display: grid;
+    justify-items: center;
+    margin-top: 100px;
+}
+
+button {
+    font-size: 20px;
+    padding: 8px 15px 8px 15px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+form {
+    display: grid;
+    justify-items: center;
+    margin-top: 100px;
+}
+
+#success-image {
+    width: 100px;
+}

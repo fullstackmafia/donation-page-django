@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+</head>
+
+<body>
+   <div class='checkout-form'>
+        <img src="https://res.cloudinary.com/fullstackmafia/image/upload/v1574344492/1016157_2_0_ca4dsv.jpg" />
+        <h3>SUPPORT NATURE WITH AS LOW AS $1</h3>
+        <button type="button" onClick="payWithRave()">Donate Here</button>
+   </div>
+</body>
+</html>
+
+<script>
+    const publicKey = "{{ key }}";
+    const photo = "{{logo}}";
+
+    function payWithRave() {
+        var x = getpaidSetup({
+            PBFPubKey: publicKey,
+            customer_email: "user@example.com",
+            amount: 1,
+            customer_phone: "234099940409",
+            currency: "USD",
+            txref: "rave-123456",
+            custom_title: "Wildlife Park",
+            custom_logo: photo,
+            onclose: function() {},
+            callback: function(response) {
+                      var txref = response.tx.txRef;
+                      console.log("This is the response returned after a charge", response);
+                      if (
+                    response.tx.chargeResponseCode == "00" ||
+                    response.tx.chargeResponseCode == "0"
+                ) {
+                    document.location.href = "success.html"
+                } else {
+                    // redirect to a failure page.
+                }
+                      x.close();
+                  }
+        });
+    }
+</script>
